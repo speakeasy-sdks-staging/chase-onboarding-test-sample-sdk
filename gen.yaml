@@ -5,13 +5,11 @@ management:
   speakeasyVersion: 1.96.2
   generationVersion: 2.150.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
+  comments: {}
   sdkClassName: Swagger-Petstore
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  baseServerURL: ""
 features:
   go:
     core: 2.91.4
@@ -20,5 +18,15 @@ go:
   version: 0.1.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: pkg/models/callbacks
+      errors: pkg/models/sdkerrors
+      operations: pkg/models/operations
+      shared: pkg/models/shared
+      webhooks: pkg/models/webhooks
+  inputModelSuffix: input
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk
