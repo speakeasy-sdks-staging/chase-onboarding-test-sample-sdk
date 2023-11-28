@@ -60,7 +60,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 }
 
 type SwaggerPetstore struct {
-	Pets *pets
+	Pets *Pets
 
 	sdkConfiguration sdkConfiguration
 }
@@ -115,9 +115,9 @@ func New(opts ...SDKOption) *SwaggerPetstore {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.1.0",
-			GenVersion:        "2.150.1",
-			UserAgent:         "speakeasy-sdk/go 0.1.0 2.150.1 1.0.0 github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk",
+			SDKVersion:        "0.2.0",
+			GenVersion:        "2.202.2",
+			UserAgent:         "speakeasy-sdk/go 0.2.0 2.202.2 1.0.0 github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk",
 		},
 	}
 	for _, opt := range opts {

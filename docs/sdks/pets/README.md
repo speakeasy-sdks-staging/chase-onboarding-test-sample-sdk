@@ -17,9 +17,10 @@ Create a pet
 package main
 
 import(
+	chaseonboardingtestsamplesdk "github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk"
 	"context"
 	"log"
-	chaseonboardingtestsamplesdk "github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk"
+	"net/http"
 )
 
 func main() {
@@ -46,8 +47,10 @@ func main() {
 
 ### Response
 
-**[*operations.CreatePetsResponse](../../models/operations/createpetsresponse.md), error**
-
+**[*operations.CreatePetsResponse](../../pkg/models/operations/createpetsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## ListPets
 
@@ -59,10 +62,10 @@ List all pets
 package main
 
 import(
-	"context"
-	"log"
 	chaseonboardingtestsamplesdk "github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -82,16 +85,18 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
-| `request`                                                                | [operations.ListPetsRequest](../../models/operations/listpetsrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
+| `request`                                                                    | [operations.ListPetsRequest](../../pkg/models/operations/listpetsrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
 
 
 ### Response
 
-**[*operations.ListPetsResponse](../../models/operations/listpetsresponse.md), error**
-
+**[*operations.ListPetsResponse](../../pkg/models/operations/listpetsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## ShowPetByID
 
@@ -103,10 +108,10 @@ Info for a specific pet
 package main
 
 import(
-	"context"
-	"log"
 	chaseonboardingtestsamplesdk "github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -114,7 +119,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pets.ShowPetByID(ctx, operations.ShowPetByIDRequest{
-        PetID: "South bandwidth male",
+        PetID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -128,13 +133,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.ShowPetByIDRequest](../../models/operations/showpetbyidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.ShowPetByIDRequest](../../pkg/models/operations/showpetbyidrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[*operations.ShowPetByIDResponse](../../models/operations/showpetbyidresponse.md), error**
-
+**[*operations.ShowPetByIDResponse](../../pkg/models/operations/showpetbyidresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
