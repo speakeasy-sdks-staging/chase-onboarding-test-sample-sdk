@@ -1,22 +1,13 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 2516596125ef223fbbef6c434d22eaac
-  docVersion: 1.0.0
-  speakeasyVersion: 1.123.0
-  generationVersion: 2.202.2
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: Swagger-Petstore
-  repoURL: https://github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
   baseServerURL: ""
-features:
-  go:
-    core: 3.1.5
-    globalServerURLs: 2.82.1
 go:
-  version: 0.2.0
+  version: 0.3.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
@@ -28,9 +19,6 @@ go:
       shared: pkg/models/shared
       webhooks: pkg/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: github.com/speakeasy-sdks-staging/chase-onboarding-test-sample-sdk
-  published: true
-  repoSubDirectory: .
